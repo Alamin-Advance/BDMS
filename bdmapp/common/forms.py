@@ -1,0 +1,48 @@
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from bdmapp.doner_profile.models import Profile
+
+class SignUpForm(UserCreationForm):
+
+    first_name = forms.CharField(max_length=30, required=False, help_text='Optional')
+    last_name = forms.CharField(max_length=30, required=False, help_text='Optional')
+    email = forms.EmailField(max_length=254, help_text='Enter a valid email address')
+
+    class Meta:
+        model = User
+        fields = [
+            'username', 
+            'first_name', 
+            'last_name', 
+            'email', 
+            'password1', 
+            'password2', 
+        ] 
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            'username', 
+            'first_name', 
+            'last_name', 
+            'email', 
+        ]
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = [
+            'Full_Name',
+            'Gender',
+            'Age',
+            'Blood_Group',
+            'Profession',
+            'Home_District',
+            'Present_Address',
+            'Last_Donation_Date',
+            'Phone_Number',
+            'Profile_Image',
+            'Email'
+        ] 
