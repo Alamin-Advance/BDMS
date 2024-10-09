@@ -1,0 +1,23 @@
+#class SendFormEmail(Templateview): 
+    
+    def get(self, request):
+
+        #get the form data
+        name = request.GET.get('name', None)
+        email = request.GET.get('email', None)
+        message = request.GET.get('message', None)
+
+
+        send_mail(
+            'Subject - Mail For Blood',
+            'Hello' + name + ',\n' + message,
+            'al908122@gmail.com',  # admin
+            [
+                email,
+            ]
+        )
+
+
+        # redirect to same page after form submit
+        messages.succes(request, ('Email sent successfully'))
+        return redirect('home')
