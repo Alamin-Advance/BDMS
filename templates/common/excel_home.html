@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head><title>Doners List</title>
+    <style>
+        body{
+            background-color:cornflowerblue;
+        }
+    </style>
+</head>
+    <body>
+        <img src="{% static 'img/drop.png' %}" height="200" width="200" align="right" alt="sorry"/>
+        <h3><font color="orange">All Doners profile Information</font></h3>
+        <ul>
+            <li>Show or Download </li>
+        </br>
+    </br>
+</br>
+                
+                 <!--   <li>
+                        <a href="{% url 'export_excel' %}"></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'export_styling_excel' %}"></a>
+                    </li> -->
+                    <i class="fas fa-download"></i>
+                       <a href="{% url 'export_write_xls' %}"><strong><font size="5">click here for download doners information sheet</font></strong> </a>
+                   
+           
+        </ul>
+        <hr>
+        <div class="text-center">
+            <button type="submit"><a href="{% url 'about' %}"><strong><font size="5" color="coral">Back</font></strong></a></button>
+          </div>
+    </body>
+</html>
+{% endblock content %}

@@ -1,0 +1,65 @@
+ {% extends 'base.html' %}
+{% load static %}
+
+<!-- {% load crispy_forms_tags %} 
+
+{% block content %}
+    <!-- Begin Page Content -->
+    <img src="{% static 'img/blood_donor.jpg' %}" height="400" width="800" align="right" alt="sorry"/>
+    <div class="container-fluid">
+         
+      <div class="text-center">
+        <button type="submit"><a href="{% url 'about' %}"><strong><font size="5" color="coral">Back</font></strong></a></button>
+      </div>
+      <hr>
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+        <h1 class="h3 mb-0 text-gray-800"><font color="blue">All Donors Profile List</font></h1>
+        </div>    
+        
+        <!-- Search form -->
+         <form  action="" method="GET" class="form-inline active-cyan-3 active-cyan-4">
+         <i class="fas fa-search" aria-hidden="true"></i>
+           <input class="form-control form-control-sm ml-3 w-75" type="text" name="q" placeholder="Search here"
+             aria-label="Search">
+         </form><br><br>
+       <!--
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+          {% endfor %}
+        {% endif %}  -->
+
+        <!-- Main Content Here -->
+
+        
+            <!--  {% csrf_token %}
+              {{form | crispy}} -->
+          
+            
+            {% for profile in object_list  %}
+            <p><img src="{{profile.Profile_Image.url}}" height="150px" width="150px"></p>
+            <h1>{{profile.Full_Name}} </h1>
+            <p><strong>Gender: </strong>    {{profile.Gender}} </p>
+            <p><strong>Age:</strong>    {{profile.Age}} </p>
+            <a href=""> <p><strong><font color='red'>Blood_Group:     {{profile.Blood_Group}}</font></strong> </p></a>
+            <p><strong>Profession:</strong>     {{profile.Profession}} </p>
+            <p><strong>Home_District:</strong>     {{profile.Home_District}} </p>
+            <p><strong>Present_Address:       {{profile.Present_Address}}</strong> </p>
+            <p><strong><font color='green'>Last_Donation_Date:          {{profile.Last_Donation_Date }}</font></strong> </p>
+            <p><strong>Phone_number:        {{profile.Phone_Number}}</strong> </p>
+            <p><strong>Email:</strong>          {{profile.Email}} </p>
+            
+            <hr>
+            {% endfor %}
+              
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %} 
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head><title>Doners List</title>
+    </head>    
+    <body>
+        <h1>This is a blog post</h1>
+        
+        <!-- Search form -->
+        <form  action="" method="GET" class="form-inline active-cyan-3 active-cyan-4">
+            <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" name="q" placeholder="Search here"
+                aria-label="Search">
+            </form><br><br>
+
+        <article id="post-971620" class="box post post-971620 type-post status-publish has-post-thumbnail hentry go-type-blog vertical-work buyer-stage-acknowledge go_syn_media-guest-post go_syn_media-image go-post-blog featured-image-focus-center">
+            <header>
+                <img width="640" height="480" src="{% static 'img/5b22475cc143e.jpg' %}"> </img>
+                                        <h4 class="deck">
+                            <a href="#" title="doner">
+                                Blood_Group</a>
+                        </h4>
+                        <h2 class="entry-title"><a href="https://gigaom.com/2020/07/23/enabling-the-new-generation-of-home-workers/" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark">doner</a></h2>	</header>
+            <div class="entry-meta">
+                            <span class="entry-author author" itemprop="author" itemscope="" itemptype="http://schema.org/Person">GigaOm Research</span>
+                                    <time class="entry-time published" datetime="2020-07-23T08:38:00-05:00" itemprop="datePublished">Jul 23, 2020 - 8:38 AM CDT</time>
+                                <div class="read-more">
+                    <a href="https://gigaom.com/2020/07/23/enabling-the-new-generation-of-home-workers/" title="doner" class="time-to-read-link">
+                        <span class="minutes"><i class="far fa-clock"></i>date time</span>
+                        <span class="text">last donate<i class="fas fa-angle-right"></i></span>
+                    </a>
+                </div>
+                    </div>
+            <footer>
+                    </footer>
+        </article>
+</body>
+</html>
+{% endblock content %}

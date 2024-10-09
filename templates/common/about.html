@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>BDMS - Home</title>
+  <link rel="icon" type="image/icon" href="blood_drop.png"/>
+  <style>
+    body{
+        background-color:cornflowerblue;
+    }
+</style>
+
+</head>
+</html>
+<body>
+  <div style="background-image: url('img/maxresdefault.jpg');"></div>
+  
+  <img src="{% static 'img/5b22475cc143e.jpg' %}" height="400" width="1800" alt="sorry"/>
+  <hr>
+  <!-- Begin Page Content -->
+  <!--  <div class="container-fluid">
+
+         Page Heading 
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+            <h4>About</h4></br>
+        </div>-->
+       
+         <!-- Main Content Here -->
+          <div class="row">
+            
+            <!-- Company Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><font size="4">Doners</font></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Contact Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><font size="4" color="green">Contacts</font></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <div class="life">          
+      <h1><font color='green' size="10">"Life For Lifes"</font></h1>
+      <h1><font color='green' size="5">"জীবন জীবনের জন্য"</font></h1>
+
+      </div>
+      <hr>
+    <p><font font-align='justify' size="5"><b>Blood donation is a voluntary procedure that can help save the lives of others.
+      A blood donation truly is a “gift of life” that a healthy individual can give to others
+      in their community who are sick or injured. In one hour’s time, a person can donate one unit 
+      of blood that can be separated into four individual components that could help save multiple lives.
+      From one unit of blood, red blood cells can be extracted for use in trauma or surgical patients. 
+      Plasma, the liquid part of blood, is administered to patients with clotting problems. The third component of blood, 
+      platelets, clot the blood when cuts or other open wounds occur, and are often used in cancer and transplant patients. 
+      Cryoprecipitated anti-hemophilic factor (AHF) is also used for clotting factors.</b></font>
+    </p>
+    <hr>
+    <p class="fas fa-user ">---<font size="5">Please click on the <font color="blue">Profile</font> option for show and complete your profile as blood donor.</font></p><br>
+    <p class="fas fa-user-plus ">---<font size="5">Please click on the <font color="blue">Doners</font> option to search blood donor.</font></p><br>
+    <p class="fas fa-address-book ">---<font size="5">Please click on the <font color="blue">View</font> option for show and download blood donor information sheet.</font></p><br>
+    <p class="fas fa-comment ">---<font size="5">Please click on the <font color="blue">Contact</font> option for communicate your doner by E-mail.</font></p><br>
+    <p class="fas fa-key ">---<font size="5">Please click on the <font color="blue">Change Password</font> option for change your password.</font></p><br>
+    <p class="fas fa-sign-out-alt ">---<font size="5">Please click on the <font color="blue">Logout</font> option for left this page.</font></p><br>
+    <!-- /.container-fluid -->
+    </div>
+   
+    </body>
+  </html>
+{% endblock content %}

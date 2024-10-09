@@ -1,0 +1,12 @@
+#life{
+    display:inline;
+	padding:20px;
+	background-color:blue;
+	color:white;
+	margin:10px;
+	width:200px;
+	height:200px;
+	border-radius:150px;
+	box-shadow:inset 5px 0px 0px 0px #fff;
+
+}

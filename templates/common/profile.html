@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %} 
+
+{% block content %}
+
+<img src="{% static 'img/images.png' %}" height="200" width="200" align="right" alt="sorry"/>
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+        <h1 class="h3 mb-0 text-gray-800"><font color="orange"><strong>Your Profile</strong></font></h1>
+        </div>  
+        <hr>        
+       <!--
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+          {% endfor %}
+        {% endif %}  -->
+
+        <!-- Main Content Here -->
+        <h2><marquee><font size="4" color="red">Please click on the <font color="blue">update profile</font> button for complete your profile as a blood donor</font></marquee></h2>
+       <hr>
+        <div class="row">
+         <div class="col-lg-2"></div>
+          <div class="col-lg-3 my-5">
+            <img src="{{user.profile.Profile_Image.url}}" class="rounded float-right" height="400px" width="300px">
+          </div>
+          <div class="card o-hidden border-0 shadow-lg my-5 col-lg-5">
+            <div class="card-body">
+              {% csrf_token %}
+              {{form | crispy}}
+                <h2><font color='black'>{{user.first_name}} {{user.last_name}}</font></h2>
+                <p><strong>Full_Name: </strong> {{user.profile.Full_Name}} </p>
+                <p><strong>Gender: </strong> {{user.profile.Gender}} </p>
+                <p><strong>Age: </strong> {{user.profile.Age}} </p>
+                <p><strong><font color='red'>Blood_Group:</font> </strong> {{user.profile.Blood_Group}} </p>
+                <p><strong>Profession: </strong> {{user.profile.Profession}} </p>
+                <p><strong>Home_District: </strong> {{user.profile.Home_District}} </p>
+                <p><strong>Present_Address: </strong> {{user.profile.Present_Address}} </p>
+                <p><strong><font color='green'>Last_Donation_Date :</font> </strong> {{user.profile.Last_Donation_Date }} </p>
+                <p><strong>Phone_Number: </strong> {{user.profile.Phone_Number}} </p>
+                <p><strong>Email: </strong> {{user.profile.Email}} </p>
+                <a href="{% url 'profile-update' %}" class="btn btn-sm btn-primary shadow-sm">Update Profile</a>
+            
+                <div class="text-center">
+                  <button type="submit"><a href="{% url 'about' %}"><strong><font size="5" color="coral">Back</font></strong></a></button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock content %}

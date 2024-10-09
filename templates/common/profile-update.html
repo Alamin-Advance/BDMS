@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %} 
+
+{% block content %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+        <h1 class="h3 mb-0 text-gray-800"><font color="orange">Complete/Update your profile as a blood donor</font></h1>
+        </div>
+        <hr>          
+
+        <!-- Main Content Here -->
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4"><font color="blue">Update Your Profile!</font></h1>
+                  </div>
+                  <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                   {{user_form | crispy}}
+                    {{profile_form | crispy}} 
+                   <button type="submit" class="btn btn-success btn-block">Update</button>
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <button type="submit"><a href="{% url 'profile' %}"><strong><font size="5" color="coral">Back</font></strong></a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock content %}
